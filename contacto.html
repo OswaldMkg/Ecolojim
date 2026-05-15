@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a Ecolojim Control de Plagas en Querétaro — Llama al 444-371-8817 o solicita una cotización gratuita por WhatsApp.">
+  <title>Contacto — Ecolojim Control de Plagas</title>
+  <link rel="icon" type="image/png" href="images/logo-color.png">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .contact-page { padding: 5rem 0 7rem; background: var(--green-deep); position: relative; overflow: hidden; }
+    .contact-page::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=50');
+      background-size: cover;
+      opacity: 0.06;
+    }
+    .contact-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 5rem;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-sidebar-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    .contact-sidebar-title em { font-style: italic; color: var(--green-light); }
+    .contact-sidebar-desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+    .contact-info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .contact-info-card {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .contact-info-card:hover {
+      background: rgba(107,163,86,0.1);
+      border-color: rgba(107,163,86,0.25);
+    }
+    .contact-info-card a {
+      color: inherit;
+      transition: color var(--transition);
+    }
+    .contact-info-card a:hover { color: var(--gold-light); }
+    .info-card-icon {
+      font-size: 1.5rem;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(107,163,86,0.15);
+      border-radius: var(--radius-md);
+      flex-shrink: 0;
+    }
+    .info-card-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 3px;
+    }
+    .info-card-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .contact-social-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .contact-social-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-right: 0.5rem;
+    }
+    .contact-social-btn {
+      width: 42px; height: 42px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.7);
+      transition: all var(--transition);
+    }
+    .contact-social-btn:hover {
+      background: var(--green-forest);
+      border-color: var(--green-leaf);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .big-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      backdrop-filter: blur(12px);
+    }
+    .big-form-title {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+    .big-form-subtitle {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 2.5rem;
+    }
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .service-option {
+      display: none;
+    }
+    .service-option + label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      transition: all var(--transition);
+    }
+    .service-option:checked + label {
+      background: rgba(107,163,86,0.2);
+      border-color: var(--green-leaf);
+      color: var(--white);
+    }
+    .service-option + label:hover {
+      border-color: rgba(107,163,86,0.4);
+      color: var(--white);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-xl);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(200,132,42,0.4);
+    }
+    .submit-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(200,132,42,0.5);
+    }
+    .submit-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 1rem;
+    }
+    .map-section { padding: 0; background: var(--dark); }
+    .map-section iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      filter: grayscale(0.3) contrast(1.1);
+      display: block;
+    }
+    .faq-section {
+      padding: 6rem 0;
+      background: var(--cream);
+    }
+    .faq-list {
+      max-width: 720px;
+      margin: 3rem auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--cream-warm);
+    }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--green-deep);
+      gap: 1rem;
+      user-select: none;
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--green-brand);
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+    .faq-item.open .faq-question::after { transform: rotate(45deg); }
+    .faq-answer {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      font-weight: 300;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 1.5rem;
+    }
+    @media(max-width: 768px) {
+      .contact-page-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .service-options { grid-template-columns: 1fr; }
+      .big-form { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-color.png" alt="Ecolojim Control de Plagas">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+      <li><a href="tel:4443718817" class="nav-cta">📞 444-371-8817</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Inicio</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="tel:4443718817" class="btn btn-gold" style="justify-content:center;">📞 444-371-8817</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <span>Contacto</span>
+    </div>
+    <div class="section-tag" style="justify-content:center;margin-bottom:1rem;color:var(--gold-light);">
+      Hablemos
+    </div>
+    <h1 class="page-hero-title"><em style="font-style:italic;color:var(--green-light);">Contáctanos</em></h1>
+    <p class="page-hero-desc">Diagnóstico gratuito, sin compromiso. Respuesta rápida y trato personalizado desde la primera llamada.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT PAGE ── -->
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-page-grid">
+
+      <!-- Sidebar info -->
+      <div class="reveal">
+        <div class="section-tag" style="color:var(--gold-light);margin-bottom:1.2rem;">Información de contacto</div>
+        <h2 class="contact-sidebar-title">Estamos aquí<br>para <em>ayudarte</em></h2>
+        <p class="contact-sidebar-desc">
+          Contáctanos por el medio que prefieras. Respondemos de lunes a sábado y atendemos emergencias los 7 días de la semana.
+        </p>
+        <div class="contact-info-cards">
+          <div class="contact-info-card">
+            <div class="info-card-icon">📞</div>
+            <div>
+              <div class="info-card-label">Teléfono</div>
+              <div class="info-card-value"><a href="tel:4443718817">444-371-8817</a></div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="info-card-icon">💬</div>
+            <div>
+              <div class="info-card-label">WhatsApp</div>
+              <div class="info-card-value"><a href="https://wa.me/524443718817" target="_blank">Escríbenos ahora</a></div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="info-card-icon">📷</div>
+            <div>
+              <div class="info-card-label">Instagram</div>
+              <div class="info-card-value"><a href="https://www.instagram.com/ecolojimcontrol" target="_blank">@ecolojimcontrol</a></div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="info-card-icon">📍</div>
+            <div>
+              <div class="info-card-label">Cobertura</div>
+              <div class="info-card-value">Querétaro y zona metropolitana</div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="info-card-icon">🕐</div>
+            <div>
+              <div class="info-card-label">Horario de atención</div>
+              <div class="info-card-value">Lun–Sáb 8:00–19:00 · Urgencias 24h</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social-row">
+          <span class="contact-social-label">Síguenos</span>
+          <a href="https://www.instagram.com/ecolojimcontrol" target="_blank" class="contact-social-btn" aria-label="Instagram">📷</a>
+          <a href="https://wa.me/524443718817" target="_blank" class="contact-social-btn" aria-label="WhatsApp">💬</a>
+          <a href="tel:4443718817" class="contact-social-btn" aria-label="Teléfono">📞</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal reveal-delay-2">
+        <div class="big-form">
+          <h3 class="big-form-title">Solicitar cotización</h3>
+          <p class="big-form-subtitle">Respuesta en menos de 24 horas · Sin costo · Sin compromiso</p>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="444 000 0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico (opcional)</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com">
+            </div>
+            <div class="form-group">
+              <label>¿Qué tipo de espacio es?</label>
+              <div class="service-options">
+                <input type="radio" name="service" id="s1" value="Hogar / Casa habitación" class="service-option">
+                <label for="s1">🏠 Hogar / Casa</label>
+                <input type="radio" name="service" id="s2" value="Negocio / Comercio" class="service-option">
+                <label for="s2">🏢 Negocio / Comercio</label>
+                <input type="radio" name="service" id="s3" value="Restaurante / Hotel" class="service-option">
+                <label for="s3">🍽️ Restaurante / Hotel</label>
+                <input type="radio" name="service" id="s4" value="Bodega / Industria" class="service-option">
+                <label for="s4">🏭 Bodega / Industria</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="plaga">¿Qué tipo de plaga tienes? (si lo sabes)</label>
+              <select id="plaga" name="plaga">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option>Cucarachas</option>
+                <option>Roedores (ratones/ratas)</option>
+                <option>Hormigas</option>
+                <option>Mosquitos / Moscas</option>
+                <option>Arañas</option>
+                <option>Avispas / Abejas</option>
+                <option>Termitas</option>
+                <option>Chinches</option>
+                <option>No sé / Necesito inspección</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">¿Algo más que quieras contarnos?</label>
+              <textarea id="message" name="message" placeholder="Describe brevemente el problema, la urgencia o cualquier detalle que nos ayude a preparar mejor el diagnóstico..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              💬 Solicitar cotización por WhatsApp
+            </button>
+            <p class="submit-note">Al enviar, serás redirigido a WhatsApp con tu información lista para enviar.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MAP ── -->
+<div class="map-section">
+  <iframe
+    src="https://maps.google.com/maps?q=Querétaro,+México&output=embed"
+    title="Ubicación — Querétaro, México"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Preguntas frecuentes</div>
+      <h2 class="section-title">Respondemos tus <em>dudas</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-question">¿Cuánto tarda el servicio de control de plagas?</div>
+        <div class="faq-answer">El tiempo varía según el tipo de plaga y el tamaño del espacio. Un tratamiento residencial estándar generalmente toma entre 1 y 2 horas. Antes de comenzar, te daremos un estimado más preciso.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Tengo que desalojar mi casa o negocio?</div>
+        <div class="faq-answer">Depende del tratamiento. Para algunos servicios sí es necesario desalojar temporalmente (generalmente 2-4 horas), mientras que otros pueden realizarse con el espacio en uso normal. Te avisaremos con anticipación qué necesitas preparar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Los productos son seguros para niños y mascotas?</div>
+        <div class="faq-answer">Sí. Trabajamos con productos de baja toxicidad registrados ante COFEPRIS. Siempre te explicamos los tiempos de espera recomendados antes de reingresar al espacio, que son mínimos con los productos que usamos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Garantizan los resultados?</div>
+        <div class="faq-answer">Ofrecemos seguimiento post-servicio para verificar los resultados. Si el problema persiste dentro del período acordado, regresamos sin costo adicional. Nuestro objetivo es que el problema quede resuelto definitivamente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Atienden emergencias?</div>
+        <div class="faq-answer">Sí. Para situaciones urgentes como infestaciones severas o nidos de avispa/abeja en áreas de riesgo, contamos con servicio de atención los 7 días de la semana. Contáctanos por WhatsApp para coordinar una visita lo antes posible.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Trabajan con restaurantes y negocios que requieren certificados?</div>
+        <div class="faq-answer">Absolutamente. Emitimos bitácoras de servicio, certificados de aplicación y reportes técnicos que cumplen con los requisitos de las auditorías sanitarias en México. Muchos de nuestros clientes son restaurantes y hoteles en Querétaro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-color.png" alt="Ecolojim" loading="lazy">
+        <p>Protegemos hogares, negocios y espacios industriales en Querétaro con métodos profesionales, ecológicos y certificados.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ecolojimcontrol" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://wa.me/524443718817" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="tel:4443718817" aria-label="Teléfono">📞</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="servicios.html#urbanas">Plagas urbanas</a></li>
+          <li><a href="servicios.html#empresas">Negocios y empresas</a></li>
+          <li><a href="servicios.html#ecologico">Manejo ecológico</a></li>
+          <li><a href="servicios.html#roedores">Control de roedores</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <ul class="footer-links">
+          <li><a href="tel:4443718817">444-371-8817</a></li>
+          <li><a href="https://wa.me/524443718817" target="_blank">WhatsApp</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.85rem;">Querétaro, México</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 <span>Ecolojim Control de Plagas</span>. Todos los derechos reservados.</p>
+      <p class="footer-copy">Querétaro, México</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/524443718817" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<script src="js/main.js" defer></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de control de plagas en Querétaro — Control de cucarachas, roedores, mosquitos, manejo ecológico y programas para empresas. Ecolojim Control de Plagas.">
+  <title>Servicios — Ecolojim Control de Plagas</title>
+  <link rel="icon" type="image/png" href="images/logo-color.png">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .services-full { padding: 6rem 0; background: var(--cream); }
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--cream-warm);
+    }
+    .service-block:last-child { border-bottom: none; }
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse > * { direction: ltr; }
+    .service-block-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 40px var(--shadow-green);
+    }
+    .service-block-tag {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+    .service-block-tag::before {
+      content: '';
+      display: block;
+      width: 28px; height: 2px;
+      background: var(--gold);
+    }
+    .service-block-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--green-deep);
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+    }
+    .service-block-title em { font-style: italic; color: var(--green-brand); }
+    .service-block-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .service-tag-pill {
+      background: var(--cream-warm);
+      color: var(--green-forest);
+      padding: 6px 14px;
+      border-radius: var(--radius-xl);
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid rgba(45,74,45,0.15);
+    }
+    @media(max-width: 768px) {
+      .service-block,
+      .service-block.reverse { grid-template-columns: 1fr; gap: 2rem; direction: ltr; }
+      .service-block-img { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-color.png" alt="Ecolojim Control de Plagas">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html" class="active">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="tel:4443718817" class="nav-cta">📞 444-371-8817</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Inicio</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="tel:4443718817" class="btn btn-gold" style="justify-content:center;">📞 444-371-8817</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <span>Servicios</span>
+    </div>
+    <div class="section-tag" style="justify-content:center;margin-bottom:1rem;color:var(--gold-light);">
+      Lo que hacemos
+    </div>
+    <h1 class="page-hero-title">Nuestros <em style="font-style:italic;color:var(--green-light);">Servicios</em></h1>
+    <p class="page-hero-desc">Soluciones profesionales y ecológicas para cada tipo de espacio y necesidad, con más de 15 años de experiencia en Querétaro.</p>
+  </div>
+</section>
+
+<!-- ── SERVICES FULL ── -->
+<section class="services-full">
+  <div class="container">
+
+    <!-- 01 Plagas Urbanas -->
+    <div class="service-block" id="urbanas">
+      <div class="reveal">
+        <img
+          class="service-block-img"
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80"
+          alt="Control de plagas urbanas en hogares"
+          loading="lazy">
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="service-block-tag">01 — Servicio residencial</div>
+        <h2 class="service-block-title">Control de <em>Plagas Urbanas</em></h2>
+        <p class="service-block-desc">
+          Las plagas urbanas no solo son una molestia: representan riesgos reales para la salud de tu familia. En ECOLOJIM identificamos el origen del problema y aplicamos el tratamiento más efectivo y seguro, adaptado a tu hogar.
+        </p>
+        <p class="service-block-desc">
+          Trabajamos con productos de última generación que eliminan la plaga sin generar riesgos para personas, mascotas ni superficies. El tratamiento incluye inspección, aplicación y guía de prevención para evitar futuras infestaciones.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag-pill">🪲 Cucarachas</span>
+          <span class="service-tag-pill">🐜 Hormigas</span>
+          <span class="service-tag-pill">🦟 Mosquitos</span>
+          <span class="service-tag-pill">🕷️ Arañas</span>
+          <span class="service-tag-pill">🐝 Avispas</span>
+          <span class="service-tag-pill">🐝 Abejas</span>
+        </div>
+        <a href="contacto.html" class="btn btn-primary">Solicitar servicio</a>
+      </div>
+    </div>
+
+    <!-- 02 Roedores -->
+    <div class="service-block reverse" id="roedores">
+      <div class="reveal">
+        <img
+          class="service-block-img"
+          src="https://images.unsplash.com/photo-1584467735871-8e85353a8413?w=700&q=80"
+          alt="Control de roedores profesional"
+          loading="lazy">
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="service-block-tag">02 — Control especializado</div>
+        <h2 class="service-block-title">Control de <em>Roedores</em></h2>
+        <p class="service-block-desc">
+          Los roedores pueden ocasionar daños estructurales, contaminar alimentos y transmitir enfermedades. Nuestro programa de control combina trampeo, cebado estratégico y sellado de accesos para una eliminación efectiva y duradera.
+        </p>
+        <p class="service-block-desc">
+          A diferencia de soluciones temporales, nuestro enfoque ataca el problema desde la raíz: identificamos rutas de acceso, puntos de anidación y fuentes de alimento para interrumpir el ciclo completo.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag-pill">🐭 Ratones</span>
+          <span class="service-tag-pill">🐀 Ratas</span>
+          <span class="service-tag-pill">🏚️ Sellado de accesos</span>
+          <span class="service-tag-pill">📊 Monitoreo continuo</span>
+        </div>
+        <a href="contacto.html" class="btn btn-primary">Solicitar servicio</a>
+      </div>
+    </div>
+
+    <!-- 03 Empresas -->
+    <div class="service-block" id="empresas">
+      <div class="reveal">
+        <img
+          class="service-block-img"
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+          alt="Control de plagas para negocios y empresas"
+          loading="lazy">
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="service-block-tag">03 — Sector empresarial</div>
+        <h2 class="service-block-title">Negocios <em>y Empresas</em></h2>
+        <p class="service-block-desc">
+          Para restaurantes, hoteles, bodegas, oficinas y comercios en general, ofrecemos programas de manejo integrado de plagas (MIP) que garantizan el cumplimiento normativo y protegen tu reputación.
+        </p>
+        <p class="service-block-desc">
+          Cada programa incluye bitácoras de servicio, reportes técnicos para auditorías, certificados de aplicación y visitas de monitoreo programadas. Tu negocio siempre estará preparado para cualquier inspección sanitaria.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag-pill">🍽️ Restaurantes</span>
+          <span class="service-tag-pill">🏨 Hoteles</span>
+          <span class="service-tag-pill">🏭 Bodegas</span>
+          <span class="service-tag-pill">🏢 Oficinas</span>
+          <span class="service-tag-pill">📋 Certificados</span>
+          <span class="service-tag-pill">📊 Bitácoras</span>
+        </div>
+        <a href="contacto.html" class="btn btn-primary">Cotizar programa empresarial</a>
+      </div>
+    </div>
+
+    <!-- 04 Ecológico -->
+    <div class="service-block reverse" id="ecologico">
+      <div class="reveal">
+        <img
+          class="service-block-img"
+          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80"
+          alt="Manejo ecológico y preventivo de plagas"
+          loading="lazy">
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="service-block-tag">04 — Enfoque verde</div>
+        <h2 class="service-block-title">Manejo <em>Ecológico</em><br>y Preventivo</h2>
+        <p class="service-block-desc">
+          Para quienes buscan una solución responsable con el medio ambiente, ofrecemos tratamientos basados en la prevención, el análisis del entorno y el uso de productos con el menor impacto ambiental posible.
+        </p>
+        <p class="service-block-desc">
+          Este enfoque es ideal para jardines, áreas verdes, zonas con niños pequeños o mascotas, y negocios con certificaciones de sustentabilidad. Efectivo, responsable y duradero.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag-pill">🌱 Baja toxicidad</span>
+          <span class="service-tag-pill">🌿 Biocontrol</span>
+          <span class="service-tag-pill">🔍 Análisis de entorno</span>
+          <span class="service-tag-pill">👶 Apto con niños</span>
+          <span class="service-tag-pill">🐾 Apto con mascotas</span>
+        </div>
+        <a href="contacto.html" class="btn btn-primary">Solicitar servicio</a>
+      </div>
+    </div>
+
+    <!-- 05 Sanitización -->
+    <div class="service-block" id="sanitizacion">
+      <div class="reveal">
+        <img
+          class="service-block-img"
+          src="https://images.unsplash.com/photo-1599709776828-ebf20c2ebb44?w=700&q=80"
+          alt="Sanitización y desinfección de espacios"
+          loading="lazy">
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="service-block-tag">05 — Higiene y desinfección</div>
+        <h2 class="service-block-title"><em>Sanitización</em><br>de Espacios</h2>
+        <p class="service-block-desc">
+          Más allá del control de plagas, ofrecemos servicios de sanitización profunda para hogares, oficinas y negocios. Eliminamos bacterias, virus, hongos y malos olores con equipos de nebulización profesional.
+        </p>
+        <p class="service-block-desc">
+          Un espacio limpio no solo se ve bien: protege la salud de quienes lo habitan. Ideal después de obras, inundaciones, o como parte de un programa de higiene preventiva.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag-pill">💨 Nebulización</span>
+          <span class="service-tag-pill">🦠 Anti-bacterias</span>
+          <span class="service-tag-pill">🏠 Residencial</span>
+          <span class="service-tag-pill">🏢 Comercial</span>
+        </div>
+        <a href="contacto.html" class="btn btn-primary">Solicitar servicio</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-band-title">¿No encuentras<br>lo que buscas?</h2>
+    <p class="cta-band-desc">Contáctanos directamente. Evaluamos tu caso sin costo y te recomendamos la mejor solución.</p>
+    <div class="cta-band-actions">
+      <a href="https://wa.me/524443718817" target="_blank" class="btn btn-gold">💬 WhatsApp</a>
+      <a href="tel:4443718817" class="btn btn-white">📞 444-371-8817</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-color.png" alt="Ecolojim" loading="lazy">
+        <p>Protegemos hogares, negocios y espacios industriales en Querétaro con métodos profesionales, ecológicos y certificados.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/ecolojimcontrol" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://wa.me/524443718817" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="tel:4443718817" aria-label="Teléfono">📞</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="#urbanas">Plagas urbanas</a></li>
+          <li><a href="#empresas">Negocios y empresas</a></li>
+          <li><a href="#ecologico">Manejo ecológico</a></li>
+          <li><a href="#roedores">Control de roedores</a></li>
+          <li><a href="#sanitizacion">Sanitización</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <ul class="footer-links">
+          <li><a href="tel:4443718817">444-371-8817</a></li>
+          <li><a href="https://wa.me/524443718817" target="_blank">WhatsApp</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.85rem;">Querétaro, México</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 <span>Ecolojim Control de Plagas</span>. Todos los derechos reservados.</p>
+      <p class="footer-copy">Querétaro, México</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/524443718817" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<script src="js/main.js" defer></script>
+</body>
+</html>
